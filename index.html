@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlaceMe – Your Career Starts Here</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🎓</span> PlaceMe
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="companies.html">Companies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Find Your Dream <span class="highlight">Placement</span>
+      </h1>
+      <p class="hero-subtitle">
+        Connecting talented students with top companies. Start your career journey today.
+      </p>
+      <div class="hero-search">
+        <input type="text" id="search-input" placeholder="Search for jobs, companies or skills…" />
+        <button class="btn btn-primary" onclick="searchJobs()">Search</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">1,200+</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">8,500+</span>
+          <span class="stat-label">Students Placed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3,000+</span>
+          <span class="stat-label">Active Jobs</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <div class="floating-card card-1">
+        <span>💼</span> Software Engineer at TechCorp
+      </div>
+      <div class="floating-card card-2">
+        <span>🚀</span> Product Intern at StartupX
+      </div>
+      <div class="floating-card card-3">
+        <span>📊</span> Data Analyst at FinanceCo
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Jobs Section -->
+  <section class="section" id="featured-jobs">
+    <div class="container">
+      <h2 class="section-title">Featured <span class="highlight">Opportunities</span></h2>
+      <p class="section-subtitle">Handpicked roles from top companies hiring now</p>
+      <div class="jobs-grid" id="jobs-grid">
+        <!-- Jobs populated by JS -->
+      </div>
+      <div class="section-cta">
+        <a href="jobs.html" class="btn btn-primary">View All Jobs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+      <p class="section-subtitle">Get placed in three simple steps</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📝</div>
+          <h3>Create Profile</h3>
+          <p>Sign up and build your student profile. Add your skills, resume, and experience.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🔍</div>
+          <h3>Explore & Apply</h3>
+          <p>Browse hundreds of internship and full-time opportunities matched to your profile.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">🎉</div>
+          <h3>Get Placed</h3>
+          <p>Receive offers, track your applications, and land your dream role.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Companies Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Trusted by <span class="highlight">Top Companies</span></h2>
+      <p class="section-subtitle">Join the network of leading employers who hire through PlaceMe</p>
+      <div class="companies-logos">
+        <div class="company-logo">TechCorp</div>
+        <div class="company-logo">StartupX</div>
+        <div class="company-logo">FinanceCo</div>
+        <div class="company-logo">MediHealth</div>
+        <div class="company-logo">CloudBase</div>
+        <div class="company-logo">DataWave</div>
+      </div>
+      <div class="section-cta">
+        <a href="companies.html" class="btn btn-outline">View All Companies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Student <span class="highlight">Success Stories</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"PlaceMe helped me land my first software engineering internship at TechCorp. The process was smooth and the platform is very user-friendly!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div>
+              <strong>Aisha Khan</strong>
+              <span>CS Graduate, 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I received three offers within two weeks of creating my profile. PlaceMe is the best placement platform I've used."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RP</div>
+            <div>
+              <strong>Rahul Patel</strong>
+              <span>MBA Graduate, 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The company matching algorithm is spot-on. Every recommendation felt tailored to my skills and interests."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SW</div>
+            <div>
+              <strong>Sarah Williams</strong>
+              <span>Engineering Graduate, 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Start Your Career Journey?</h2>
+      <p>Join thousands of students who found their dream placement through PlaceMe.</p>
+      <div class="cta-buttons">
+        <a href="register.html" class="btn btn-light">Get Started – It's Free</a>
+        <a href="jobs.html" class="btn btn-outline-light">Browse Jobs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+          <p>Connecting students with top employers for internships and full-time opportunities.</p>
+        </div>
+        <div class="footer-links">
+          <h4>For Students</h4>
+          <ul>
+            <li><a href="students.html">Student Portal</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>For Companies</h4>
+          <ul>
+            <li><a href="companies.html">Company Portal</a></li>
+            <li><a href="post-job.html">Post a Job</a></li>
+            <li><a href="register.html?type=company">Join as Employer</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PlaceMe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

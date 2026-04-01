@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – PlaceMe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="companies.html">Companies</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get in <span class="highlight">Touch</span></h1>
+      <p>Have a question? We're here to help you find your perfect placement.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start">
+
+      <!-- Contact Info -->
+      <div>
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">Contact Information</h2>
+
+        <div style="display:flex;flex-direction:column;gap:1.25rem">
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="font-size:1.5rem">📧</div>
+            <div>
+              <strong>Email Us</strong>
+              <p style="color:var(--text-muted);font-size:.9rem;margin-top:.2rem">support@placeme.com</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="font-size:1.5rem">📞</div>
+            <div>
+              <strong>Call Us</strong>
+              <p style="color:var(--text-muted);font-size:.9rem;margin-top:.2rem">+1 (800) 555-0199</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="font-size:1.5rem">📍</div>
+            <div>
+              <strong>Headquarters</strong>
+              <p style="color:var(--text-muted);font-size:.9rem;margin-top:.2rem">123 Innovation Drive<br/>San Francisco, CA 94107</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="font-size:1.5rem">🕒</div>
+            <div>
+              <strong>Office Hours</strong>
+              <p style="color:var(--text-muted);font-size:.9rem;margin-top:.2rem">Monday – Friday<br/>9:00 AM – 6:00 PM (PST)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <div id="contact-success" class="alert alert-success" style="display:none">
+          <span>✅</span> Thanks for reaching out! We'll get back to you within 24 hours.
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="John Smith" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Subject</label>
+            <select id="contact-subject" class="form-control">
+              <option value="">Select a topic…</option>
+              <option>General Enquiry</option>
+              <option>Student Support</option>
+              <option>Employer / Company</option>
+              <option>Technical Issue</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+          <p>Connecting students with top employers for internships and full-time opportunities.</p>
+        </div>
+        <div class="footer-links">
+          <h4>For Students</h4>
+          <ul>
+            <li><a href="students.html">Student Portal</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>For Companies</h4>
+          <ul>
+            <li><a href="companies.html">Company Portal</a></li>
+            <li><a href="post-job.html">Post a Job</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PlaceMe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

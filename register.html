@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – PlaceMe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">🎓 PlaceMe</div>
+      <h1 class="auth-title">Create Your Account</h1>
+      <p class="auth-subtitle">Join thousands of students finding their dream placement</p>
+
+      <!-- Account type tabs -->
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem">
+        <button id="tab-student" class="btn btn-primary btn-sm" style="flex:1" onclick="setAccountType('student')">🎓 Student</button>
+        <button id="tab-company" class="btn btn-outline btn-sm" style="flex:1" onclick="setAccountType('company')">🏢 Company</button>
+      </div>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="reg-name" id="name-label">Full Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="John Smith" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <input type="password" id="reg-password" class="form-control" placeholder="At least 8 characters" autocomplete="new-password" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="reg-confirm">Confirm Password</label>
+          <input type="password" id="reg-confirm" class="form-control" placeholder="Repeat your password" autocomplete="new-password" />
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="reg-terms" />
+          <label for="reg-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:.5rem">
+          Create Account
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+
+      <div style="text-align:center;margin-top:1.25rem">
+        <a href="index.html" style="font-size:.83rem;color:var(--text-muted)">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    let accountType = "student";
+
+    function setAccountType(type) {
+      accountType = type;
+      const nameLabel = document.getElementById("name-label");
+      const tabStudent = document.getElementById("tab-student");
+      const tabCompany = document.getElementById("tab-company");
+      if (type === "student") {
+        nameLabel.textContent = "Full Name";
+        tabStudent.classList.replace("btn-outline", "btn-primary");
+        tabCompany.classList.replace("btn-primary", "btn-outline");
+      } else {
+        nameLabel.textContent = "Company Name";
+        tabCompany.classList.replace("btn-outline", "btn-primary");
+        tabStudent.classList.replace("btn-primary", "btn-outline");
+      }
+    }
+
+    // Check for URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("type") === "company") setAccountType("company");
+  </script>
+</body>
+</html>

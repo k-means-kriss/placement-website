@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Job – PlaceMe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="companies.html" class="active">Companies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html?type=company" class="btn btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Post a <span class="highlight">Job</span></h1>
+      <p>Reach thousands of qualified candidates in minutes</p>
+    </div>
+  </section>
+
+  <!-- Post Job Form -->
+  <section class="section">
+    <div class="container" style="max-width:720px">
+      <div id="post-success" class="alert alert-success" style="display:none">
+        <span>🎉</span> Your job has been posted successfully! It will appear in listings within the hour.
+      </div>
+
+      <form id="post-job-form" novalidate>
+        <div class="dash-card">
+          <h2>Job Details</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label class="form-label" for="job-title">Job Title <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="job-title" class="form-control" placeholder="e.g. Software Engineer" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-company">Company Name <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="job-company" class="form-control" placeholder="Your company name" />
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label class="form-label" for="job-type">Job Type <span style="color:var(--danger)">*</span></label>
+              <select id="job-type" class="form-control">
+                <option value="">Select type…</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Internship</option>
+                <option>Contract</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-mode">Work Mode</label>
+              <select id="job-mode" class="form-control">
+                <option value="">Select mode…</option>
+                <option>Remote</option>
+                <option>Hybrid</option>
+                <option>On-site</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label class="form-label" for="job-location">Location</label>
+              <input type="text" id="job-location" class="form-control" placeholder="City, State or Remote" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-salary">Salary / Compensation</label>
+              <input type="text" id="job-salary" class="form-control" placeholder="e.g. $80k – $100k or $30/hr" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="job-tags">Required Skills / Tags (comma-separated)</label>
+            <input type="text" id="job-tags" class="form-control" placeholder="Python, React, SQL" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="job-description">Job Description <span style="color:var(--danger)">*</span></label>
+            <textarea id="job-description" class="form-control" rows="6" placeholder="Describe the role, responsibilities, requirements and perks…"></textarea>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <h2>Contact Details</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label class="form-label" for="job-contact-name">Contact Person</label>
+              <input type="text" id="job-contact-name" class="form-control" placeholder="HR Manager name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-contact-email">Contact Email <span style="color:var(--danger)">*</span></label>
+              <input type="email" id="job-contact-email" class="form-control" placeholder="hr@company.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="job-deadline">Application Deadline</label>
+            <input type="date" id="job-deadline" class="form-control" />
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;gap:1rem">
+          <a href="companies.html" class="btn btn-outline">Cancel</a>
+          <button type="submit" class="btn btn-primary btn-lg">Post Job</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+          <p>Connecting students with top employers for internships and full-time opportunities.</p>
+        </div>
+        <div class="footer-links">
+          <h4>For Students</h4>
+          <ul>
+            <li><a href="students.html">Student Portal</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>For Companies</h4>
+          <ul>
+            <li><a href="companies.html">Company Portal</a></li>
+            <li><a href="post-job.html">Post a Job</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PlaceMe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("post-job-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const title   = document.getElementById("job-title").value.trim();
+      const company = document.getElementById("job-company").value.trim();
+      const type    = document.getElementById("job-type").value;
+      const desc    = document.getElementById("job-description").value.trim();
+      const email   = document.getElementById("job-contact-email").value.trim();
+      let valid = true;
+
+      if (!title)   { showFieldError("job-title",   "Job title is required.");    valid = false; } else clearFieldError("job-title");
+      if (!company) { showFieldError("job-company", "Company name is required."); valid = false; } else clearFieldError("job-company");
+      if (!type)    { showFieldError("job-type",    "Please select a job type."); valid = false; } else clearFieldError("job-type");
+      if (!desc || desc.length < 30) { showFieldError("job-description", "Please provide a detailed description (min 30 chars)."); valid = false; } else clearFieldError("job-description");
+      if (!email.includes("@")) { showFieldError("job-contact-email", "Valid contact email required."); valid = false; } else clearFieldError("job-contact-email");
+
+      if (!valid) return;
+
+      document.getElementById("post-success").style.display = "flex";
+      document.getElementById("post-job-form").reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      showToast("Job posted successfully! 🎉", "success");
+    });
+  </script>
+</body>
+</html>

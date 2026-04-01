@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Jobs – PlaceMe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html" class="active">Jobs</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="companies.html">Companies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Browse <span class="highlight">Opportunities</span></h1>
+      <p>Find internships and full-time roles that match your skills and ambitions</p>
+    </div>
+  </section>
+
+  <!-- Jobs Content -->
+  <div class="jobs-page">
+    <div class="container">
+      <!-- Search Bar -->
+      <div class="hero-search" style="max-width:600px;margin:0 auto 2rem">
+        <input type="text" id="jobs-search" placeholder="Search by role, company or skill…" />
+        <button class="btn btn-primary" onclick="filterJobs()">Search</button>
+      </div>
+
+      <div class="jobs-layout">
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+          <div class="filter-card">
+            <h3>Job Type</h3>
+            <div class="filter-option">
+              <input type="checkbox" id="type-ft" class="filter-type" value="Full-time" />
+              <label for="type-ft">Full-time</label>
+              <span class="filter-count">4</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type-int" class="filter-type" value="Internship" />
+              <label for="type-int">Internship</label>
+              <span class="filter-count">2</span>
+            </div>
+          </div>
+
+          <div class="filter-card">
+            <h3>Work Mode</h3>
+            <div class="filter-option">
+              <input type="checkbox" id="mode-remote" class="filter-mode" value="Remote" />
+              <label for="mode-remote">Remote</label>
+              <span class="filter-count">2</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="mode-hybrid" class="filter-mode" value="Hybrid" />
+              <label for="mode-hybrid">Hybrid</label>
+              <span class="filter-count">2</span>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="mode-onsite" class="filter-mode" value="On-site" />
+              <label for="mode-onsite">On-site</label>
+              <span class="filter-count">2</span>
+            </div>
+          </div>
+
+          <button class="btn btn-outline btn-block" onclick="clearFilters()">Clear Filters</button>
+        </aside>
+
+        <!-- Jobs List -->
+        <div class="jobs-main">
+          <div class="jobs-toolbar">
+            <span class="jobs-count"><strong id="jobs-count-num">6</strong> jobs found</span>
+            <div class="jobs-sort">
+              <select id="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="salary">By Salary</option>
+              </select>
+            </div>
+          </div>
+          <div class="jobs-list" id="jobs-list">
+            <!-- Jobs rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">🎓 PlaceMe</a>
+          <p>Connecting students with top employers for internships and full-time opportunities.</p>
+        </div>
+        <div class="footer-links">
+          <h4>For Students</h4>
+          <ul>
+            <li><a href="students.html">Student Portal</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>For Companies</h4>
+          <ul>
+            <li><a href="companies.html">Company Portal</a></li>
+            <li><a href="post-job.html">Post a Job</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PlaceMe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function clearFilters() {
+      document.querySelectorAll(".filter-type, .filter-mode").forEach(el => el.checked = false);
+      document.getElementById("jobs-search").value = "";
+      filterJobs();
+    }
+  </script>
+</body>
+</html>
